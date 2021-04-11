@@ -51,9 +51,12 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) {
-  let summ = a + b + c
-  let multt = a * b * c
-return[summ , multt ,`${a} and ${b} and ${c} sum to ${summ}.`, `The product of ${a} and ${b} and ${c} is ${multt}.` ]
+  let summ = sum(a , b); 
+  let second = sum(summ[0] , c);
+  let multt = multiply(a , b);
+  let multttwo = multiply(multt[0] , c);
+  console.log(multttwo);
+return[second[0] , multttwo[0] ,`${a} and ${b} and ${c} sum to ${second[0]}.`, `The product of ${a} and ${b} and ${c} is ${multttwo[0]}.` ]
 
   //eslint-disable-line
 }
@@ -134,13 +137,13 @@ This function should be dynamic, accepting an array of any length.
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyAnyArray() function and see if the test passes.*/
 
 // Write your code here
-let testDynamicArray = [1, 2, 3, 4, 5]; //eslint-disable-line
+// let testDynamicArray = [1, 2, 3, 4, 5]; //eslint-disable-line
 
-function multiplyAnyArray(dynamicArray) {
-  //eslint-disable-line
-  for (i = 0 ; i < testDynamicArray.length ; i++)
-  let first = multiply(testDynamicArray[0]);
-}
+// function multiplyAnyArray(dynamicArray) {
+//   //eslint-disable-line
+//   for (i = 0 ; i < testDynamicArray.length ; i++)
+//   let first = multiply(testDynamicArray[0]);
+// }
 
 // Here is the test for multiplyArray(); uncomment it to run it
 // testMultiplyAnyArray(testDynamicArray);
